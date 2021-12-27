@@ -1,0 +1,14 @@
+.bottom-bar {
+  @apply flex flex-row items-center justify-between 
+    rounded-lg shadow-lg m-4
+    bg-gray-400 dark:bg-gray-600 px-2
+    h-12;
+}
+
+.bottom-bar-input {
+  @apply font-semibold w-full
+    bg-transparent outline-none 
+    ml-0 mr-auto
+    text-gray-500  dark:text-gray-400 placeholder-gray-500
+    cursor-text;
+}

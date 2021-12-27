@@ -1,0 +1,30 @@
+<ng-icon
+  class="text-lg tracking-wider font-semibold text-gray-500 ml-2 my-auto"
+  size="20"
+  name="hero-hashtag"
+></ng-icon>
+<h5
+  class="text-xl text-gray-500 tracking-wider font-semibold text-opacity-80 mr-auto ml-2 my-auto transition duration-300 ease-in-out"
+>
+  NgTailwind
+</h5>
+<ng-icon
+  size="24"
+  class="text-gray-500 mr-4 ml-auto transition duration-300 ease-in-out hover:text-pink-400 cursor-pointer"
+  [name]="darkMode ? 'hero-moon' : 'hero-sun'"
+  (click)="toggleMode()"
+></ng-icon>
+<div class="search">
+  <input class="search-input" type="text" placeholder="Search..." />
+  <ng-icon
+    size="18"
+    class="text-secondary my-auto"
+    name="hero-search"
+  ></ng-icon>
+</div>
+<ng-icon class="top-navigation-icon" size="24" name="hero-bell"></ng-icon>
+<ng-icon
+  class="top-navigation-icon"
+  size="24"
+  name="hero-user-circle"
+></ng-icon>

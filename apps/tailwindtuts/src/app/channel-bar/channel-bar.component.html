@@ -1,0 +1,14 @@
+<div class="flex items-center justify-center h-16 m-0 p-0">
+  <h5
+    class="text-lg font-bold tracking-wider text-gray-600 mr-auto ml-4 my-auto dark:text-gray-400"
+  >
+    Channels
+  </h5>
+</div>
+<div class="flex flex-col p-1 m-0">
+  <hachs-channel-group
+    *ngFor="let channel of channels"
+    class="channel-group"
+    [channel]="channel"
+  ></hachs-channel-group>
+</div>

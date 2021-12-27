@@ -1,0 +1,19 @@
+<div
+  class="flex flex-row items-center justify-evenly mx-0 text-gray-500 cursor-pointer"
+  (click)="expand()"
+>
+  <ng-icon
+    class="mr-2"
+    [name]="expanded ? 'hero-chevron-down' : 'hero-chevron-right'"
+  ></ng-icon>
+  <h5 [ngClass]="[expanded ? 'header-selected' : 'header']">
+    {{ channel.name }}
+  </h5>
+  <ng-icon class="ml-auto" name="hero-plus-solid"></ng-icon>
+</div>
+<ng-container *ngIf="expanded">
+  <hachs-topic
+    *ngFor="let name of channel.topics"
+    name="{{ name }}"
+  ></hachs-topic>
+</ng-container>

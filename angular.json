@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/tailwindtuts",
             "index": "apps/tailwindtuts/src/index.html",
@@ -20,7 +22,9 @@
               "apps/tailwindtuts/src/favicon.ico",
               "apps/tailwindtuts/src/assets"
             ],
-            "styles": ["apps/tailwindtuts/src/styles.css"],
+            "styles": [
+              "apps/tailwindtuts/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -85,11 +89,16 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/tailwindtuts"],
+          "outputs": [
+            "coverage/apps/tailwindtuts"
+          ],
           "options": {
             "jestConfig": "apps/tailwindtuts/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       },
       "tags": []
@@ -113,14 +122,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/tailwindtuts-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/tailwindtuts-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["tailwindtuts"]
+      "implicitDependencies": [
+        "tailwindtuts"
+      ]
     }
   }
 }

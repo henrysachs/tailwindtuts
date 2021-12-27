@@ -1,0 +1,8 @@
+.header {
+  @apply text-gray-500  text-opacity-90 
+    text-lg font-semibold
+    cursor-default align-middle;
+}
+.header-selected {
+  @apply text-blue-500 text-opacity-90 text-lg font-bold align-middle;
+}
