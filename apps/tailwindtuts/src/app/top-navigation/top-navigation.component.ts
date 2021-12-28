@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkmodeService } from '../darkmode.service';
 
 @Component({
   selector: 'hachs-top-navigation',
@@ -7,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavigationComponent implements OnInit {
   public darkMode = true;
-  constructor() {}
+  constructor(private darkModeService:DarkmodeService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.darkModeService.$darkmode.subscribe((isDarkMode) => {
+      this.darkMode = isDarkMode;
+    })
+  }
 
   toggleMode() {
     this.darkMode = !this.darkMode;
+    this.darkModeService.$darkmode.next(this.darkMode);
   }
 }

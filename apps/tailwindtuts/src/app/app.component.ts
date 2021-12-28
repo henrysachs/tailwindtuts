@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DarkmodeService } from './darkmode.service';
 
 @Component({
   selector: 'hachs-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tailwindtuts';
+
+  constructor(public darkmodeService: DarkmodeService){}
 }
